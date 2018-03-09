@@ -31,6 +31,12 @@
             margin-left: 0;
         }
 
+        .layout-topbar {
+            .topbar-search {
+                display: none;
+            }
+        }
+
         &.layout-wrapper-active {
             overflow: hidden;
 
