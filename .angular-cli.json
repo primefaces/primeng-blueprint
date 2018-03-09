@@ -21,7 +21,7 @@
       "styles": [
           "../node_modules/primeng/resources/primeng.min.css",
           "../src/assets/sass/layout/layout.scss",
-          "../src/assets/sass/layout/theme.scss"
+          "../src/assets/sass/theme/theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
@@ -56,7 +56,7 @@
     }
   },
   "defaults": {
-    "styleExt": "css",
+    "styleExt": "scss",
     "component": {}
   }
 }

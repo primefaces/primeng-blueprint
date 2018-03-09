@@ -3,7 +3,6 @@
         position: fixed;
         width: 240px;
         height: 100%;
-        left: -240px;
         top: 64px;
         z-index: 999;
         border-right: 2px dotted #888888;
@@ -12,10 +11,10 @@
             background-color: #f4f4f4;
 
             .ui-scrollpanel-bar {
-              background-color: #f4f4f4;
-              @include opacity(.3);
+                background-color: #f4f4f4;
+                opacity: .3;
             }
-            
+
             .layout-menu {
                 padding-bottom: 120px;
             }
@@ -32,13 +31,11 @@
                 width: 100%;
 
                 &.active-menuitem {
-                    > a {
+                    >a {
                         color: #000000;
-
                         i {
                             color: #000000;
                         }
-
                         i.layout-submenu-toggler {
                             @include transition(.3s);
                             @include rotate(-180deg);
@@ -46,12 +43,12 @@
                     }
                 }
 
-                > a {
+                >a {
                     display: block;
                     padding: 10px 10px 10px 10px;
                     position: relative;
 
-                    > .menuitem-text {
+                    >.menuitem-text {
                         display: inline-block;
                         max-width: 145px;
                         word-break: break-all;
@@ -88,7 +85,6 @@
                                 a {
                                     padding-left: 30px;
                                 }
-
                                 ul {
                                     li {
                                         a {
@@ -110,26 +106,6 @@
                 li {
                     a {
                         i.layout-submenu-toggler {
-                            display: inline-block;
-                        }
-                    }
-                }
-            }
-        }
-    }
-
-    &.layout-wrapper-static {
-        .layout-sidebar {
-            left: 0;
-
-            .layout-menu {
-                li {
-                    a {
-                        i.layout-submenu-toggler {
-                            display: inline-block;
-                        }
-
-                        .menuitem-badge {
                             display: inline-block;
                         }
                     }

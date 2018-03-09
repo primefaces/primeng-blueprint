@@ -1,9 +1,17 @@
 .templates {
-    img {        
+    text-align: center;
+    padding: 30px 20px 20px 20px;
+
+    .ui-g > div {
+        padding: 1em;
+    }
+
+    img {
+        width: 100%;
         filter: gray;
         -webkit-filter: grayscale(1);
         @include transition(all .3s);
-
+        
         &:hover {
             filter: none;
             -webkit-filter: none;

@@ -7,20 +7,24 @@
         position: fixed;
         width: 100%;
         z-index: 999997;
+        left: 0;
+        top: 0;
         box-sizing: border-box;
 
         .menu-btn {
-            float: left;
+            display: inline-block;
+            vertical-align: middle;
 
             i {
                 font-size: 24px;
-                line-height: 26px;
             }
         }
 
 
         .logo {
             margin-left: 20px;
+            display: inline-block;
+            vertical-align: middle;
         }
 
         .special-button {
@@ -48,15 +52,6 @@
 
             &:focus {
                 outline: 0;
-            }
-        }
-    }
-
-    &.layout-wrapper-static {    
-        .layout-main {
-            .layout-topbar {
-                left: 240px;
-                width: calc(100% - 240px);
             }
         }
     }
