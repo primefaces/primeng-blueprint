@@ -5,13 +5,13 @@
         height: 100%;
         top: 64px;
         z-index: 999;
-        border-right: 2px dotted #888888;
+        border-right: 2px dotted $menuBorderColor;
 
         .ui-scrollpanel {
-            background-color: #f4f4f4;
+            background-color: $menuBgColor;
 
             .ui-scrollpanel-bar {
-                background-color: #f4f4f4;
+                background-color: $menuBgColor;
                 opacity: .3;
             }
 
@@ -32,9 +32,9 @@
 
                 &.active-menuitem {
                     >a {
-                        color: #000000;
+                        color: $menuItemActiveColor;
                         i {
-                            color: #000000;
+                            color: $menuItemActiveColor;
                         }
                         i.layout-submenu-toggler {
                             @include transition(.3s);
@@ -59,7 +59,7 @@
                         float: right;
                         width: 20px;
                         height: 20px;
-                        font-size: 20px;
+                        font-size: $fontSize+4px;
                         position: absolute;
                         right: 10px;
                         top: 50%;

@@ -23,7 +23,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.model = [
-            {label: 'Dashboard'},
+            {label: 'Dashboard', url: '#'},
             {
                 label: 'Menu Hierarchy',
                 items: [

@@ -4,8 +4,8 @@ html {
 
 body {
     font-family: Arial;
-    font-size: 16px;
-    color: #1b1b1b;
+    font-size: $fontSize;
+    color: $textColor;
     -webkit-font-smoothing: antialiased;
     padding: 0;
     margin: 0;
@@ -15,7 +15,7 @@ body {
 }
 
 a {
-    color: #888888;
+    color: $textSecondaryColor;
     text-decoration: none;
 
     &:hover {
