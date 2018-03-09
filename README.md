@@ -1,6 +1,6 @@
 # ExampleProject
 
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 1.6.5.
+This project demonstrates the infrastructure of a PrimeNG Premium Angular CLI Template.
 
 ## Development server
 

@@ -20,7 +20,8 @@
       "prefix": "app",
       "styles": [
           "../node_modules/primeng/resources/primeng.min.css",
-          "../src/assets/sass/layout/layout.css"
+          "../src/assets/sass/layout/layout.scss",
+          "../src/assets/sass/layout/theme.scss"
       ],
       "scripts": [],
       "environmentSource": "environments/environment.ts",
