@@ -3,7 +3,7 @@
         height: 64px;
         background-color: $topbarBgColor;
         border-bottom: 2px dotted $topbarBorderColor;
-        padding: 16px 42px 16px 24px;
+        padding: 16px;
         position: fixed;
         width: 100%;
         z-index: 999997;
@@ -27,54 +27,21 @@
             vertical-align: middle;
         }
 
-        .special-button {
-            box-shadow: 0 12px 22px 0 rgba(0,0,0,0.16);
+        .topbar-button {
             border-radius: 20px;
             border: 2px dotted $topbarButtonBorderColor;
             background: $topbarButtonBgColor;
             font-size: $fontSize - 2px;
             color: $topbarButtonTextColor;
             letter-spacing: 0.2px;
-            width: 180px;
-            height: 32px;
+            height: 2em;
+            min-width: 2em;
             float: right;
-            -webkit-transition: all .5s;
-            transition: all .5s;
+            display: block;
 
-            &:hover {
-                background-color: $topbarButtonHoverBgColor;
-                color: $topbarButtonHoverTextColor;
-            }
-
-            &:active {
-                box-shadow: 0 12px 22px 0 rgba(0,0,0,0);
-            }
-
-            &:focus {
-                outline: 0;
-            }
-        }
-
-
-        .topbar-search {
-            padding: 0;
-            position: relative;
-            float: right;
-            margin: 0 10px 0 0;
-
-            input {
-                -moz-border-radius: 15px;
-                -webkit-border-radius: 15px;
-                border-radius: 15px;
-                height: 32px;
-            }
-
-            .fa {
-                font-size: $fontSize+2px;
-                position: absolute;
-                top: 7px;
-                right: 5px;
-                color: $textColor;
+            .ui-button-icon-right {
+                width: 1em;
+                height: 1em;
             }
         }
     }
