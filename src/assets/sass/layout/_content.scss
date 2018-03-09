@@ -1,0 +1,39 @@
+.layout-wrapper {
+
+    .layout-main {
+        .layout-content {
+            padding-top: 50px;
+
+            .templates {
+                text-align: center;
+                padding: 30px 20px 20px 20px;
+                .ui-g>div {
+                    padding: 1em;
+                }
+                img {
+                    width: 100%;
+                }
+            }
+
+        }
+
+        .layout-main-mask {
+            display: none;
+        }
+
+        .layout-footer {
+            width: 100%;
+            padding: 16px 24px;
+            background-color: #f4f4f4;
+            border-top: 2px dotted #888888;
+
+            .footer-text-right {
+                margin-top: 10px;
+
+                span {
+                    vertical-align: middle;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,13 @@
+.templates {
+    img {        
+        filter: gray;
+        -webkit-filter: grayscale(1);
+        @include transition(all .3s);
+
+        &:hover {
+            filter: none;
+            -webkit-filter: none;
+            @include scale(1.02);
+        }
+    }
+}
