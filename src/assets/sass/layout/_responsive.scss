@@ -32,8 +32,15 @@
         }
 
         .layout-topbar {
-            .topbar-search {
-                display: none;
+            .topbar-button {
+                .ui-button-text {
+                    display: none;
+                }
+
+                .ui-button-icon-right {
+                    right: 50%;
+                    margin-right: -.6em;
+                }  
             }
         }
 
