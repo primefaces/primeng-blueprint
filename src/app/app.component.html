@@ -1,5 +1,4 @@
-<div class="layout-wrapper" (click)="onWrapperClick()" 
-    [ngClass]="{'layout-wrapper-static': layoutStatic, 'layout-wrapper-active': mobileMenuActive}">
+<div class="layout-wrapper" [ngClass]="{'layout-sidebar-active': sidebarActive}">
 
     <app-menu></app-menu>
 
@@ -12,7 +11,7 @@
 
         <app-footer></app-footer>
 
-        <div class="layout-main-mask" *ngIf="mobileMenuActive"></div>
+        <div class="layout-main-mask"></div>
     </div>
 
 </div>

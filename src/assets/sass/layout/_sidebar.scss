@@ -4,14 +4,16 @@
         width: 240px;
         height: 100%;
         top: 64px;
+        left: -240px;
         z-index: 999;
-        border-right: 2px dotted $menuBorderColor;
+        border-right: 2px dotted $sidebarBorderColor;
+        @include transition(left $sidebarAnimationDuration);
 
         .ui-scrollpanel {
-            background-color: $menuBgColor;
+            background-color: $sidebarBgColor;
 
             .ui-scrollpanel-bar {
-                background-color: $menuBgColor;
+                background-color: $sidebarBgColor;
                 opacity: .3;
             }
 
@@ -27,43 +29,28 @@
             width: 258px;
 
             li {
-                padding: 4px 30px 4px 10px;
+                padding: 0;
                 width: 100%;
 
-                &.active-menuitem {
-                    >a {
-                        color: $menuItemActiveColor;
-                        i {
-                            color: $menuItemActiveColor;
-                        }
-                        i.layout-submenu-toggler {
-                            @include transition(.3s);
-                            @include rotate(-180deg);
-                        }
-                    }
-                }
-
-                >a {
+                a {
                     display: block;
-                    padding: 10px 10px 10px 10px;
+                    padding: .5em 1em;
                     position: relative;
 
-                    >.menuitem-text {
+                    > .menuitem-text {
                         display: inline-block;
-                        max-width: 145px;
                         word-break: break-all;
                     }
 
                     i {
                         @include transition(.3s);
                         float: right;
-                        width: 20px;
-                        height: 20px;
-                        font-size: $fontSize+4px;
+                        width: 1.5em;
+                        height: 1.5em;
                         position: absolute;
-                        right: 10px;
+                        right: 1.5em;
                         top: 50%;
-                        margin-top: -10px;
+                        margin-top: -.75em;
                     }
                 }
 
@@ -71,46 +58,13 @@
                     overflow: hidden;
                     list-style-type: none;
                     margin: 0;
-                    padding: 0;
-
-                    li {
-                        padding: 4px 0;
-
-                        a {
-                            padding-left: 20px;
-                        }
-
-                        ul {
-                            li {
-                                a {
-                                    padding-left: 30px;
-                                }
-                                ul {
-                                    li {
-                                        a {
-                                            padding-left: 40px;
-                                        }
-                                    }
-                                }
-                            }
-                        }
-                    }
+                    padding-left: 1em;
                 }
             }
         }
 
         &.layout-sidebar-active {
             left: 0;
-
-            .layout-menu {
-                li {
-                    a {
-                        i.layout-submenu-toggler {
-                            display: inline-block;
-                        }
-                    }
-                }
-            }
         }
     }
 }

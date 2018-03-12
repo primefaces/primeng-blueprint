@@ -1,36 +1,5 @@
-@media (min-width: 1025px) {
-    .layout-wrapper {
-        .layout-sidebar {
-            left: -240px;
-        }
-
-        .layout-main {
-            margin-left: 0;
-        }
-
-        &.layout-wrapper-static {
-            .layout-sidebar {
-                left: 0;
-            }
-
-            .layout-main {
-                margin-left: 240px;
-            }
-        }
-    }
-}
-
 @media (max-width: 1024px) {
     .layout-wrapper {
-
-        .layout-sidebar {
-            left: -240px;
-        }
-
-        .layout-main {
-            margin-left: 0;
-        }
-
         .layout-topbar {
             .topbar-button {
                 .ui-button-text {
@@ -44,34 +13,16 @@
             }
         }
 
-        &.layout-wrapper-active {
-            overflow: hidden;
-
+        &.layout-sidebar-active {
             .layout-sidebar {
                 left: 0;
-
-                .layout-menu {
-                    li {
-                        a {
-                            i.layout-submenu-toggler {
-                                display: inline-block;
-                            }
-                        }
-                    }
-                }
-            }
-
-            .layout-main {
-                position: fixed;
-                left: 240px;
-                width: calc(100%);
             }
 
             .layout-main-mask {
-                z-index: 999998;
-                position: absolute;
+                z-index: 998;
+                position: fixed;
                 left: 0;
-                top: 0;
+                top: 64px;
                 background-color: $layoutMaskBgColor;
                 opacity: .5;
                 $opacity-ie: .5 * 100;

@@ -9,8 +9,6 @@ import {AppComponent} from './app.component';
 })
 export class AppMenuComponent implements OnInit, AfterViewInit {
 
-    @Input() reset: boolean;
-
     model: any[];
 
     @ViewChild('scrollPanel') layoutMenuScrollerViewChild: ScrollPanel;
@@ -23,7 +21,7 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     ngOnInit() {
         this.model = [
-            {label: 'Dashboard', url: '#'},
+            {label: 'Dashboard', routerLink: ['/']},
             {
                 label: 'Menu Hierarchy',
                 items: [
@@ -80,14 +78,17 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
     template: `
         <ng-template ngFor let-child let-i="index" [ngForOf]="(root ? item : item.items)">
             <li [ngClass]="{'active-menuitem': isActive(i)}" [class]="child.badgeStyleClass">
-                <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" *ngIf="!child.routerLink"
-                   [attr.tabindex]="!visible ? '-1' : null" [attr.target]="child.target"
-                    (mouseenter)="hover=true" (mouseleave)="hover=false">
+                <a [href]="child.url||'#'" (click)="itemClick($event,child,i)" *ngIf="!child.routerLink" [attr.target]="child.target">
                     <span class="menuitem-text">{{child.label}}</span>
                     <i class="fa fa-chevron-down layout-submenu-toggler" *ngIf="child.items"></i>
                 </a>
-                <ul app-submenu [item]="child" *ngIf="child.items" [visible]="isActive(i)" [reset]="reset"
-                    [@children]="isActive(i) ? 'visible' : 'hidden'"></ul>
+                <a (click)="itemClick($event,child,i)" *ngIf="child.routerLink"
+                    [routerLink]="child.routerLink" routerLinkActive="active-menuitem-routerlink"
+                    [routerLinkActiveOptions]="{exact: true}" [attr.target]="child.target">
+                    <span class="menuitem-text">{{child.label}}</span>
+                    <i class="fa fa-chevron-down layout-submenu-toggler" *ngIf="child.items"></i>
+                </a>
+                <ul app-submenu [item]="child" *ngIf="child.items" [@children]="isActive(i) ? 'visible' : 'hidden'"></ul>
             </li>
         </ng-template>
     `,
@@ -109,10 +110,6 @@ export class AppSubMenuComponent {
     @Input() item: MenuItem;
 
     @Input() root: boolean;
-
-    @Input() visible: boolean;
-
-    _reset: boolean;
 
     activeIndex: number;
 
@@ -139,18 +136,15 @@ export class AppSubMenuComponent {
 
         // prevent hash change
         if (item.items || (!item.url && !item.routerLink)) {
-          setTimeout(() => {
-            this.appMenu.layoutMenuScrollerViewChild.moveBar();
-          }, 450);
+            setTimeout(() => {
+                this.appMenu.layoutMenuScrollerViewChild.moveBar();
+            }, 450);
             event.preventDefault();
         }
 
         // hide menu
         if (!item.items) {
-            if (this.app.isMobile()) {
-                this.app.sidebarActive = false;
-                this.app.mobileMenuActive = false;
-            }
+            this.app.sidebarActive = false;
         }
     }
 
@@ -158,11 +152,4 @@ export class AppSubMenuComponent {
         return this.activeIndex === index;
     }
 
-    @Input() get reset(): boolean {
-        return this._reset;
-    }
-
-    set reset(val: boolean) {
-        this._reset = val;
-    }
 }

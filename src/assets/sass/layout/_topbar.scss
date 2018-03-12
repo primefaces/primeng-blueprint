@@ -3,45 +3,59 @@
         height: 64px;
         background-color: $topbarBgColor;
         border-bottom: 2px dotted $topbarBorderColor;
-        padding: 16px;
+        padding: 1em;
         position: fixed;
         width: 100%;
-        z-index: 999997;
         left: 0;
         top: 0;
-        box-sizing: border-box;
+        z-index: 999;
 
         .menu-btn {
             display: inline-block;
             vertical-align: middle;
 
             i {
-                font-size: $fontSize+8px;
+                font-size: 1.5em;
             }
         }
 
-
         .logo {
-            margin-left: 20px;
+            margin-left: 1.25em;
             display: inline-block;
             vertical-align: middle;
         }
 
         .topbar-button {
-            border-radius: 20px;
+            @include border-radius(20px);
             border: 2px dotted $topbarButtonBorderColor;
             background: $topbarButtonBgColor;
-            font-size: $fontSize - 2px;
             color: $topbarButtonTextColor;
-            letter-spacing: 0.2px;
             height: 2em;
             min-width: 2em;
             float: right;
             display: block;
+            font-size: 1em;
 
             .ui-button-icon-right {
                 width: 1em;
                 height: 1em;
+            }
+        }
+    }
+}
+
+@media (max-width: 1024px) {
+    .layout-wrapper {
+        .layout-topbar {
+            .topbar-button {
+                .ui-button-text {
+                    display: none;
+                }
+
+                .ui-button-icon-right {
+                    right: 50%;
+                    margin-right: -.6em;
+                }  
             }
         }
     }
