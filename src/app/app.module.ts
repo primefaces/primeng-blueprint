@@ -7,9 +7,8 @@ import { AppMenuComponent, AppSubMenuComponent} from './app.menu.component';
 import { AppTopBarComponent } from './app.topbar.component';
 import { AppFooterComponent } from './app.footer.component';
 import { DashboardComponent } from './pages/dashboard.component';
-import { ScrollPanelModule } from 'primeng/primeng';
-import { InputTextModule } from 'primeng/primeng';
-import { ButtonModule } from 'primeng/primeng';
+import { ScrollPanelModule } from 'primeng/scrollpanel';
+import { ButtonModule } from 'primeng/button';
 
 @NgModule({
     imports: [
@@ -17,7 +16,6 @@ import { ButtonModule } from 'primeng/primeng';
         BrowserAnimationsModule,
         AppRoutes,
         ScrollPanelModule,
-        InputTextModule,
         ButtonModule
     ],
     declarations: [
