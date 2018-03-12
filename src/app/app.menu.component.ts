@@ -1,7 +1,7 @@
-import {Component, Input, OnInit, AfterViewInit, ViewChild} from '@angular/core';
-import {trigger, state, style, transition, animate} from '@angular/animations';
-import {MenuItem, ScrollPanel} from 'primeng/primeng';
-import {AppComponent} from './app.component';
+import { Component, Input, OnInit, AfterViewInit, ViewChild } from '@angular/core';
+import { trigger, state, style, transition, animate } from '@angular/animations';
+import { MenuItem, ScrollPanel } from 'primeng/primeng';
+import { AppComponent } from './app.component';
 
 @Component({
     selector: 'app-menu',
@@ -13,15 +13,15 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
 
     @ViewChild('scrollPanel') layoutMenuScrollerViewChild: ScrollPanel;
 
-    constructor(public app: AppComponent) {}
+    constructor(public app: AppComponent) { }
 
     ngAfterViewInit() {
-      setTimeout(() => {this.layoutMenuScrollerViewChild.moveBar(); }, 100);
+        setTimeout(() => { this.layoutMenuScrollerViewChild.moveBar(); }, 100);
     }
 
     ngOnInit() {
         this.model = [
-            {label: 'Dashboard', routerLink: ['/']},
+            { label: 'Dashboard', routerLink: ['/'] },
             {
                 label: 'Menu Hierarchy',
                 items: [
@@ -31,16 +31,16 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                             {
                                 label: 'Submenu 1.1',
                                 items: [
-                                    {label: 'Submenu 1.1.1'},
-                                    {label: 'Submenu 1.1.2'},
-                                    {label: 'Submenu 1.1.3'},
+                                    { label: 'Submenu 1.1.1' },
+                                    { label: 'Submenu 1.1.2' },
+                                    { label: 'Submenu 1.1.3' },
                                 ]
                             },
                             {
                                 label: 'Submenu 1.2',
                                 items: [
-                                    {label: 'Submenu 1.2.1'},
-                                    {label: 'Submenu 1.2.2'}
+                                    { label: 'Submenu 1.2.1' },
+                                    { label: 'Submenu 1.2.2' }
                                 ]
                             },
                         ]
@@ -51,16 +51,16 @@ export class AppMenuComponent implements OnInit, AfterViewInit {
                             {
                                 label: 'Submenu 2.1',
                                 items: [
-                                    {label: 'Submenu 2.1.1'},
-                                    {label: 'Submenu 2.1.2'},
-                                    {label: 'Submenu 2.1.3'}
+                                    { label: 'Submenu 2.1.1' },
+                                    { label: 'Submenu 2.1.2' },
+                                    { label: 'Submenu 2.1.3' }
                                 ]
                             },
                             {
                                 label: 'Submenu 2.2',
                                 items: [
-                                    {label: 'Submenu 2.2.1'},
-                                    {label: 'Submenu 2.2.2'}
+                                    { label: 'Submenu 2.2.1' },
+                                    { label: 'Submenu 2.2.2' }
                                 ]
                             },
                         ]
@@ -115,9 +115,9 @@ export class AppSubMenuComponent {
 
     hover: boolean;
 
-    constructor(public app: AppComponent, public appMenu: AppMenuComponent) {}
+    constructor(public app: AppComponent, public appMenu: AppMenuComponent) { }
 
-    itemClick(event: Event, item: MenuItem, index: number) {
+    itemClick(event: Event, item: MenuItem, index: number)  {
         // avoid processing disabled items
         if (item.disabled) {
             event.preventDefault();
@@ -131,7 +131,7 @@ export class AppSubMenuComponent {
 
         // execute command
         if (item.command) {
-            item.command({originalEvent: event, item: item});
+            item.command({ originalEvent: event, item: item });
         }
 
         // prevent hash change
