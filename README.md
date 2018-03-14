@@ -2,6 +2,12 @@
 
 This project demonstrates the infrastructure of a PrimeNG Premium Angular CLI Template.
 
+![alt text](https://www.primefaces.org/wp-content/uploads/2018/03/why-you-should-ng-2.jpg "PrimeNG")
+
+## Live Demo
+
+Project is deployed at: https://www.primefaces.org/primeng-blueprint/
+
 ## Development server
 
 Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
