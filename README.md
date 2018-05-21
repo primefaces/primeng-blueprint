@@ -2,7 +2,7 @@
 
 This project demonstrates the infrastructure of a PrimeNG Premium Angular CLI Template.
 
-![alt text](https://www.primefaces.org/wp-content/uploads/2018/03/why-you-should-ng-2.jpg "PrimeNG")
+![alt text](https://www.primefaces.org/wp-content/uploads/2018/05/why-you-should-ng.jpg "PrimeNG")
 
 ## Live Demo
 
