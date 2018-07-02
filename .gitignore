@@ -34,6 +34,10 @@ npm-debug.log
 testem.log
 /typings
 
+# themes
+/src/assets/sass/theme/theme.css
+/src/assets/sass/layout/layout.css
+
 # e2e
 /e2e/*.js
 /e2e/*.map

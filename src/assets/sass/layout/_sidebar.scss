@@ -44,13 +44,21 @@
 
                     i {
                         @include transition(.3s);
+                        transition: 0.3s;
                         float: right;
-                        width: 1.5em;
-                        height: 1.5em;
-                        position: absolute;
-                        right: 1.5em;
-                        top: 50%;
-                        margin-top: -.75em;
+                        margin-right: 0.85em;
+                    }
+                }
+
+                &.active-menuitem {
+                    > a {
+                        .layout-submenu-toggler {
+                            -webkit-transform: rotate(-180deg);
+                            -moz-transform: rotate(-180deg);
+                            -o-transform: rotate(-180deg);
+                            -ms-transform: rotate(-180deg);
+                            transform: rotate(-180deg);
+                        }
                     }
                 }
 
