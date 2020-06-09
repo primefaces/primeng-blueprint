@@ -1,6 +1,7 @@
 import { Component, Input, OnInit, AfterViewInit, ViewChild } from '@angular/core';
 import { trigger, state, style, transition, animate } from '@angular/animations';
-import { MenuItem, ScrollPanel } from 'primeng/primeng';
+import { MenuItem } from 'primeng/api';
+import { ScrollPanel } from 'primeng/scrollpanel'
 import { AppComponent } from './app.component';
 
 @Component({
