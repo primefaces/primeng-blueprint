@@ -22,7 +22,7 @@
     "@angular/platform-browser-dynamic": "~9.0.2",
     "@angular/router": "~9.0.2",
     "@fullcalendar/core": "^4.1.0",
-    "chart.js": "^2.8.0",
+    "chart.js": "^2.9.4",
     "primeflex": "1.0.0",
     "primeicons": "2.0.0",
     "primeng": "^9.1.0",
